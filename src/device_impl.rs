@@ -165,7 +165,7 @@ where
         const LED_ALL_CALL: u8 = 0b111_0000;
         // const SW_RESET: u8 = 0b000_0011; this gets absorbed by the high speed mode test
         const HIGH_SPEED_MODE: u8 = 0b00_0111;
-        if address == 0 || address == LED_ALL_CALL || address <= HIGH_SPEED_MODE {
+        if address == 0  || address <= HIGH_SPEED_MODE {
             Err(Error::InvalidInputData)
         } else {
             Ok(())
